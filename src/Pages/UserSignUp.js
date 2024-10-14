@@ -6,15 +6,15 @@ function UserSignIn() {
     const [name, setName] = useState("")
     const [email, setemail] = useState("")
     const [password, setPassword] = useState("")
-    const [errorName, setErrorName] = useState("")
-    const [errorEmail, seterrorEmail] = useState("")
-    const [errorPassword, setErrorPassword] = useState("")
+    const [errorName] = useState("")
+    const [errorEmail] = useState("")
+    const [errorPassword] = useState("")
     const [number, setnumber] = useState()
-    const [errorNumber, seterrorNumber] = useState()
-    const [successfulmsg, setSuccessfulmsg] = useState("")
-    const [create, setCreate] = useState("please create an account!")
-    const [adminData, setadminData] = useState([])
-    const [isin, setisin] = useState()
+    const [errorNumber] = useState()
+    const [successfulmsg] = useState("")
+    // const [create, setCreate] = useState("please create an account!")
+    // const [adminData, setadminData] = useState([])
+    // const [isin, setisin] = useState()
 
     const navigate = useNavigate()
     const handleChange = (e, keyword) => {
@@ -39,7 +39,7 @@ function UserSignIn() {
             email:email,
             password:password,
             number:number
-        }).then((res)=>console.log(res)).catch((err)=>console.log(err))
+        }).then((res)=>navigate("/managecontacts")).catch((err)=>console.log(err))
 
     }
 
@@ -165,7 +165,7 @@ function UserSignIn() {
                                     </p>
                                 </div>
                                 <div>
-                                    <img src="https://static.vecteezy.com/system/resources/thumbnails/003/689/228/small_2x/online-registration-or-sign-up-login-for-account-on-smartphone-app-user-interface-with-secure-password-mobile-application-for-ui-web-banner-access-cartoon-people-illustration-vector.jpg" alt="no image" />
+                                    <img src="https://static.vecteezy.com/system/resources/thumbnails/003/689/228/small_2x/online-registration-or-sign-up-login-for-account-on-smartphone-app-user-interface-with-secure-password-mobile-application-for-ui-web-banner-access-cartoon-people-illustration-vector.jpg" alt="dispimage" />
                                 </div>
                             </div>
                         </form>
